@@ -3,7 +3,8 @@ import { Navigate, Outlet } from "react-router-dom"
 
 const ProtectedRoutes = () => {
   const userName = useSelector(store => store.userName)
-  if (userName.length >= 3) {
+  // if (userName.length >= 3) {
+    if (true) {
     return (
       <div>
         <Outlet/>

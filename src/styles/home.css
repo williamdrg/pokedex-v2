@@ -1,3 +1,29 @@
+.home_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 600px;
+  position: absolute;
+  top: 20px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.home img {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  filter: blur(10px);
+}
 
 .pokedex_container {
   width: 500px;
@@ -344,6 +370,11 @@
     transform: rotate(360deg);
   }
 }
+@media (max-width: 1281px) {
+  .logo {
+    width: 450px;
+  }
+}
 
 @media (max-width: 768px) {
   .pokedex_container {
@@ -366,6 +397,9 @@
     height: calc(200px * 0.8);
     bottom: calc(250px * 0.8);
     right: calc(150px * 0.8);
+  }
+  .logo {
+    width: 400px;
   }
 }
 
@@ -419,5 +453,8 @@
       transform: translateY(0);
       scale: 0.5;
     }
+  }
+  .logo {
+    width: 280px;
   }
 }

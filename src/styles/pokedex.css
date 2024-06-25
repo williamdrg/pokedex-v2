@@ -1,0 +1,178 @@
+
+.fund_pokedex {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+  background: linear-gradient(145deg, rgba(1, 16, 31, 0.2), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+}
+
+.fund_pokedex img {
+  width: 100%;
+}
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1%;
+}
+
+.form_search_pokemon {
+  display: flex;
+  align-items: center;
+  width: 220px;
+}
+
+.input_search {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-right: -40px;
+  height: 45px;
+}
+
+.btn_search {
+  position: relative;
+  z-index: 1;
+}
+
+.btn_search img {
+  width: 30px;
+}
+.btn_search:hover {
+  scale: 1.2;
+  transition: scale .5s;
+}
+
+.back {
+  width: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+.back img {
+  width: 100%;
+}
+/* title */
+
+.title_card {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 15px;
+  text-align: center;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  animation: writing 6s forwards;
+}
+
+.title_card h1 {
+  font-size: 21px;
+  font-family: 'Patrick Hand', sans-serif;  
+  width: 77%;
+  overflow: hidden; 
+  border-right: .15em solid orange;
+  letter-spacing: .15em;
+  animation:
+    /* typing 6s steps(40, end),
+    blink-caret .75s step-end infinite; */
+    typing-blink 6s steps(40, end) forwards;
+}
+
+@keyframes writing {
+  0% {
+    overflow: hidden;
+    height: 33px;
+  }
+  50% {
+    overflow: hidden;
+    height: 33px;
+  }
+  80% {
+    overflow: hidden;
+    height: 33px;
+  }
+  100% {
+    overflow:visible;
+    height: 33px;
+  }
+  }
+
+.title_card span {
+  background: linear-gradient(to top, #ffffff, #ffcccb, #ffe4e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+@keyframes typing-blink {
+  0% {
+    width: 0;
+  }
+  90% {
+    width: 100%;
+    border-right: .15em solid orange;
+  }
+  100% {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+@keyframes blink-caret {
+  0%{
+    border-color: transparent
+  }
+  50% {
+    border-color: orange;
+  }
+  100%{
+    border-color: transparent;
+  }
+}
+/* ------ */
+@media (max-width: 768px) {
+  .form_container {
+    margin-top: 3%;
+  }
+  .title_card {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);;
+  }
+  .title_card h1 {font-size: 14px}
+  .title_card span {font-size: 18px}
+  @keyframes writing {
+    0% {
+      overflow: hidden;
+      height: 55px;
+    }
+    50% {
+      overflow: hidden;
+      height: 55px;
+    }
+    80% {
+      overflow: hidden;
+      height: 55px;
+    }
+    100% {
+      overflow:visible;
+      height: 55px;
+    }
+    }
+}

@@ -2,17 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-color: rgb(44, 38, 38);
-} */
+:root {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: #744edecd;
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: #58acfa79;
+}
 
-body, html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(44, 38, 38);
-  font-family: 'Luckiest Guy', sans-serif;
-  color: bisque;
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.content_select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

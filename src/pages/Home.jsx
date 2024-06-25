@@ -30,7 +30,9 @@ const Home = () => {
   const getCiclePkedexCass = () => openAndClose ? "svg-frame" : " ";
 
   return (
-    <div>
+    <div className="home_container">
+      <div className="home"><img src="/assets/imgHome/fondoHome.png" alt="pokemon background"/></div>
+      <div className="logo"><img src="/assets/imgHome/logopokemon.png" alt="image the logo pokemon" /></div>
       <div className="pokedex_container">
         <div onClick={handleClick} className={getPokedexClass()}><img src="/assets/imgHome/pokedex.png" alt="background login 1" /></div>
         <div onClick={handleClick} className={getPokedexClass2()}><img src="/assets/imgHome/pokedex.png" alt="background login 2" /></div>
@@ -84,7 +86,7 @@ const Home = () => {
 
         <div className={getInputUserClass()}>
           <div className="dragon"><img src="/assets/imgHome/fondoblue.svg" alt="image the dragon" /></div>
-          <div className="circle"><img src="/assets/imgHome/circulo.png" alt="circle" /></div>
+          <div className="circle"><img src="/assets/imgHome/circle.png" alt="circle" /></div>
           <div className="play"><img src="/assets/imgHome/play.png" alt="button play" /></div>
           <div className="pause"><img src="/assets/imgHome/pause.png" alt="button pause" /></div>
           <div className="arrows"><img src="/assets/imgHome/arrows.png" alt="button arrow" /></div>
