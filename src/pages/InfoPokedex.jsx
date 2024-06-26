@@ -14,7 +14,7 @@ const InfoPokedex = () => {
   }, []);
 
   const moves = pokemon?.moves
-
+  console.log('pokemos',pokemon)
   return (
     <div className="poke_card_container">
       <div className="infoCard_container">
@@ -24,7 +24,7 @@ const InfoPokedex = () => {
        
        
         <div className="img_pokemoninfo">
-          <img src={pokemon?.sprites?.other.dream_world.front_default} alt="image the pokemon" />
+          <img src={pokemon?.sprites?.other.dream_world.front_default || pokemon?.sprites?.front_shiny} alt="image the pokemon" />
         </div>
 
         <div className="stats">
